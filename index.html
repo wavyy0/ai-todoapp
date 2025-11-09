@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FocusFlow - Tasks</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="app__header">
+      <div>
+        <p class="eyebrow">Today</p>
+        <h1>FocusFlow Tasks</h1>
+        <p class="subhead">Capture what matters, mark it done, keep moving.</p>
+      </div>
+      <button class="ghost" id="clear-completed" type="button" aria-live="polite">Clear completed</button>
+    </header>
+
+    <form id="task-form" autocomplete="off">
+      <label class="sr-only" for="task-input">Add a task</label>
+      <input id="task-input" name="task" required maxlength="120" placeholder="Add a new task" spellcheck="false" />
+      <button type="submit">Add task</button>
+    </form>
+
+    <section aria-live="polite">
+      <ul id="task-list" class="task-list"></ul>
+      <p id="empty-state" class="empty-state">You have nothing on your list right now.</p>
+    </section>
+  </main>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>
